@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "google-fonts";
+  src: import url('https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap');;
+}
+
+body {
+  background: #333;
+  font-family: "google-fonts";
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  width: 100vw;
+
+  & > div {
+
+    border-radius: 16px;
+    padding: 32px;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 180px;
+    border: 12px solid white;
+
+    & img {
+
+    }
+  }
+}
