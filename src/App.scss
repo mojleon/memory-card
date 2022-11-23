@@ -11,6 +11,7 @@ body {
 .App {
   display: flex;
   align-items: center;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
 }
@@ -23,7 +24,6 @@ body {
   width: 100vw;
 
   & > div {
-
     border-radius: 16px;
     padding: 32px;
     box-sizing: content-box;
@@ -32,9 +32,10 @@ body {
     text-align: center;
     min-width: 180px;
     border: 12px solid white;
+    cursor: pointer;
 
-    & img {
-
+    & > * {
+      pointer-events: none;
     }
   }
 }
