@@ -33,13 +33,18 @@ class App extends React.Component {
     this.clickCard = this.clickCard.bind(this)
   }
 
+  componentDidMount() {
+    this.shuffle()
+  }
+
   reset() {
     this.state.picked = [];
-    this.state.score = 0;
+    this.setState({score: 0});
   }
 
   incrementScore() {
-    this.state.score++;
+    this.setState({score: (this.state.score += 1)});
+    if(this.state.score > this.state.hiscore) this.setState({hiscore: (this.state.hiscore += 1)});
   }
 
   gameOver() {
