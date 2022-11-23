@@ -8,7 +8,6 @@ class Card extends React.Component {
     render() {
         return  <div id={this.props.number} onClick={(event) => {this.props.clickCard(event)} }>
                     <img src={this.props.image} />
-                    {this.props.number}
                 </div>
     }
 }
