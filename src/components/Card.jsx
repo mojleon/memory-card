@@ -1,15 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Card extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    
-    render() {
-        return  <div id={this.props.number} onClick={(event) => {this.props.clickCard(event)} }>
-                    <img src={this.props.image} />
-                </div>
-    }
+function Card(props) {
+    return  <div id={props.number} onClick={(event) => {props.clickCard(event)} }>
+                <img src={props.image} />
+            </div>
 }
 
 export default Card;
