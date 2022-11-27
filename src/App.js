@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Aquarius from '../src/assets/images/Aquarius.svg';
-import Aries from '../src/assets/images/Aries.svg';
-import Cancer from '../src/assets/images/Cancer.svg';
-import Capricorn from '../src/assets/images/Capricorn.svg';
-import Gemini from '../src/assets/images/Gemini.svg';
-import Leo from '../src/assets/images/Leo.svg';
+import BishopMozgus from "../src/assets/images/Berserk/BishopMozgus.jpg";
+import Conrad from "../src/assets/images/Berserk/Conrad.jpg";
+import CountSlug from "../src/assets/images/Berserk/CountSlug.jpg";
+import Femto from "../src/assets/images/Berserk/Femto.jpg";
+import Grunbeld from "../src/assets/images/Berserk/Grunbeld.jpg";
+import RapeHorse from "../src/assets/images/Berserk/RapeHorse.jpg";
 
-import Libra from '../src/assets/images/Libra.svg';
-import Pisces from '../src/assets/images/Pisces.svg';
-import Sagittarius from '../src/assets/images/Sagittarius.svg';
-import Scorpio from '../src/assets/images/Scorpio.svg';
-import Taurus from '../src/assets/images/Taurus.svg';
-import Virgo from '../src/assets/images/Virgo.svg';
+import Rosine from "../src/assets/images/Berserk/Rosine.jpg";
+import Slan from "../src/assets/images/Berserk/Slan.jpg";
+import Ubik from "../src/assets/images/Berserk/Ubik.jpg";
+import Void from "../src/assets/images/Berserk/Void.jpg";
+import Wyad from "../src/assets/images/Berserk/Wyad.jpg";
+import Zodd from "../src/assets/images/Berserk/Zodd.jpg";
 
-import './App.scss';
+import "./App.scss";
 
-import Card from './components/Card.jsx'
-import Header from './components/Header.jsx'
+import Card from "./components/Card.jsx";
+import Header from "./components/Header.jsx";
 
 class App extends React.Component {
   constructor(props) {
@@ -25,43 +25,43 @@ class App extends React.Component {
 
     this.state = {
       picked: [],
-      
+
       score: 0,
-      hiscore: 0
-    }
-    
-    this.clickCard = this.clickCard.bind(this)
+      hiscore: 0,
+    };
+
+    this.clickCard = this.clickCard.bind(this);
   }
 
   componentDidMount() {
-    this.shuffle()
+    this.shuffle();
   }
 
   reset() {
     this.state.picked = [];
-    this.setState({score: 0});
+    this.setState({ score: 0 });
   }
 
   incrementScore() {
-    this.setState({score: (this.state.score += 1)});
-    if(this.state.score > this.state.hiscore) this.setState({hiscore: (this.state.hiscore += 1)});
+    this.setState({ score: (this.state.score += 1) });
+    if (this.state.score > this.state.hiscore)
+      this.setState({ hiscore: (this.state.hiscore += 1) });
   }
 
   gameOver() {
-    alert('GAME OVER')
+    alert("GAME OVER");
     this.reset();
   }
 
   shuffle() {
-    var cards = document.querySelector('.cards');
+    var cards = document.querySelector(".cards");
     for (var i = cards.children.length; i >= 0; i--) {
-        cards.appendChild(cards.children[Math.random() * i | 0]);
+      cards.appendChild(cards.children[(Math.random() * i) | 0]);
     }
-    
   }
 
   clickCard(event) {
-    if(this.state.picked.includes(event.target.id)) return this.gameOver();
+    if (this.state.picked.includes(event.target.id)) return this.gameOver();
     this.state.picked.push(event.target.id);
     this.incrementScore();
     this.shuffle();
@@ -70,22 +70,82 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-          <Header score={this.state.score} hiscore={this.state.hiscore}/>
-          <main className="cards">
-            <Card number="1" image={Aquarius} clickCard={this.clickCard}/>
-            <Card number="2" image={Aries} clickCard={this.clickCard}/>
-            <Card number="3" image={Cancer} clickCard={this.clickCard}/>
-            <Card number="4" image={Capricorn} clickCard={this.clickCard}/>
-            <Card number="5" image={Gemini} clickCard={this.clickCard}/>
-            <Card number="6" image={Leo} clickCard={this.clickCard}/>
+        <Header score={this.state.score} hiscore={this.state.hiscore} />
+        <main className="cards">
+          <Card
+            number="1"
+            name="Bishop mozgus"
+            image={BishopMozgus}
+            clickCard={this.clickCard}
+          />
+          <Card
+            number="2"
+            name="Conrad"
+            image={Conrad}
+            clickCard={this.clickCard}
+          />
+          <Card
+            number="3"
+            name="Count slug"
+            image={CountSlug}
+            clickCard={this.clickCard}
+          />
+          <Card
+            number="4"
+            name="Femto"
+            image={Femto}
+            clickCard={this.clickCard}
+          />
+          <Card
+            number="5"
+            name="Grunbeld"
+            image={Grunbeld}
+            clickCard={this.clickCard}
+          />
+          <Card
+            number="6"
+            name="Rape horse"
+            image={RapeHorse}
+            clickCard={this.clickCard}
+          />
 
-            <Card number="7" image={Libra} clickCard={this.clickCard}/>
-            <Card number="8" image={Pisces} clickCard={this.clickCard}/>
-            <Card number="9" image={Sagittarius} clickCard={this.clickCard}/>
-            <Card number="10" image={Scorpio} clickCard={this.clickCard}/>
-            <Card number="11" image={Taurus} clickCard={this.clickCard}/>
-            <Card number="12" image={Virgo} clickCard={this.clickCard}/>
-          </main>
+          <Card
+            number="7"
+            name="Rosine"
+            image={Rosine}
+            clickCard={this.clickCard}
+          />
+          <Card
+            number="8"
+            name="Slan"
+            image={Slan}
+            clickCard={this.clickCard}
+          />
+          <Card
+            number="9"
+            name="Ubik"
+            image={Ubik}
+            clickCard={this.clickCard}
+          />
+          <Card
+            number="10"
+            name="Void"
+            image={Void}
+            clickCard={this.clickCard}
+          />
+          <Card
+            number="11"
+            name="Wyad"
+            image={Wyad}
+            clickCard={this.clickCard}
+          />
+          <Card
+            number="12"
+            name="Zodd"
+            image={Zodd}
+            clickCard={this.clickCard}
+          />
+        </main>
       </div>
     );
   }
