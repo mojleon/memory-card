@@ -28,9 +28,17 @@ class App extends React.Component {
 
       score: 0,
       hiscore: 0,
+
+      slainChecklist: false,
     };
 
     this.clickCard = this.clickCard.bind(this);
+    this.toggleSlained = this.toggleSlained.bind(this);
+  }
+
+  toggleSlained(event) {
+    event.target.classList.toggle("active");
+    this.setState({ slainChecklist: !this.state.slainChecklist });
   }
 
   componentDidMount() {
@@ -48,8 +56,16 @@ class App extends React.Component {
       this.setState({ hiscore: (this.state.hiscore += 1) });
   }
 
+  youWon() {
+    alert("GUTS KILLED ALL THE APOSTLES!");
+    this.incrementScore();
+    this.reset();
+  }
+
   gameOver() {
-    alert("GAME OVER");
+    alert(
+      "GUTS WENT LOOKING FOR THE APOSTLE, BUT COULDN'T FIND IT FOR IT WAS DEAD!"
+    );
     this.reset();
   }
 
@@ -62,6 +78,7 @@ class App extends React.Component {
 
   clickCard(event) {
     if (this.state.picked.includes(event.target.id)) return this.gameOver();
+    if (this.state.picked.length === 11) return this.youWon();
     this.state.picked.push(event.target.id);
     this.incrementScore();
     this.shuffle();
@@ -70,43 +87,53 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header score={this.state.score} hiscore={this.state.hiscore} />
+        <Header
+          toggleSlained={this.toggleSlained}
+          score={this.state.score}
+          hiscore={this.state.hiscore}
+        />
         <main className="cards">
           <Card
             number="1"
-            name="Bishop mozgus"
+            name="Bishop Mozgus"
             image={BishopMozgus}
             clickCard={this.clickCard}
+            slain={this.state.slainChecklist && this.state.picked.includes("1")}
           />
           <Card
             number="2"
             name="Conrad"
             image={Conrad}
             clickCard={this.clickCard}
+            slain={this.state.slainChecklist && this.state.picked.includes("2")}
           />
           <Card
             number="3"
             name="Count slug"
             image={CountSlug}
             clickCard={this.clickCard}
+            slain={this.state.slainChecklist && this.state.picked.includes("3")}
           />
           <Card
             number="4"
             name="Femto"
             image={Femto}
             clickCard={this.clickCard}
+            slain={this.state.slainChecklist && this.state.picked.includes("4")}
           />
           <Card
             number="5"
             name="Grunbeld"
             image={Grunbeld}
             clickCard={this.clickCard}
+            slain={this.state.slainChecklist && this.state.picked.includes("5")}
           />
           <Card
             number="6"
             name="Rape horse"
             image={RapeHorse}
             clickCard={this.clickCard}
+            slain={this.state.slainChecklist && this.state.picked.includes("6")}
           />
 
           <Card
@@ -114,36 +141,48 @@ class App extends React.Component {
             name="Rosine"
             image={Rosine}
             clickCard={this.clickCard}
+            slain={this.state.slainChecklist && this.state.picked.includes("7")}
           />
           <Card
             number="8"
             name="Slan"
             image={Slan}
             clickCard={this.clickCard}
+            slain={this.state.slainChecklist && this.state.picked.includes("8")}
           />
           <Card
             number="9"
             name="Ubik"
             image={Ubik}
             clickCard={this.clickCard}
+            slain={this.state.slainChecklist && this.state.picked.includes("9")}
           />
           <Card
             number="10"
             name="Void"
             image={Void}
             clickCard={this.clickCard}
+            slain={
+              this.state.slainChecklist && this.state.picked.includes("10")
+            }
           />
           <Card
             number="11"
             name="Wyad"
             image={Wyad}
             clickCard={this.clickCard}
+            slain={
+              this.state.slainChecklist && this.state.picked.includes("11")
+            }
           />
           <Card
             number="12"
             name="Zodd"
             image={Zodd}
             clickCard={this.clickCard}
+            slain={
+              this.state.slainChecklist && this.state.picked.includes("12")
+            }
           />
         </main>
       </div>

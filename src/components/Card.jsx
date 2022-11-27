@@ -10,6 +10,7 @@ function Card(props) {
     >
       <img src={props.image} />
       <h2>{props.name}</h2>
+      <div className={props.slain ? `slash` : ""}></div>
     </div>
   );
 }
