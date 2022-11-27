@@ -1,8 +1,14 @@
+@font-face {
+  font-family: "SpringRage";
+  src: url("./assets/Font/SpringRage.ttf") format("truetype");
+}
+
 body {
   background-image: url("./assets/images/Berserk/background.jpg");
   background-size: cover;
   background-position: center;
   color: white;
+  font-family: "SpringRage";
 }
 
 .App {
@@ -17,8 +23,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 16px;
-  width: 100vw;
+  gap: 8px;
+  width: 100%;
   color: black;
 
   & > div {
@@ -27,7 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    min-width: 180px;
+    min-width: 100px;
     background-color: white;
     cursor: pointer;
 
@@ -47,6 +53,23 @@ nav {
   justify-content: space-around;
   align-items: center;
   text-align: right;
-  width: 100vw;
+  width: 1444px;
   padding: 32px;
+
+  & > .logo {
+    text-align: center;
+    font-size: 32pt;
+
+    & > * {
+      margin: 0;
+    }
+
+    & > p {
+      margin-top: -24px;
+    }
+  }
+
+  & > .score {
+    font-size: 24pt;
+  }
 }

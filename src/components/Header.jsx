@@ -5,8 +5,11 @@ import Logo from "../../src/assets/images/Berserk/Logo.svg";
 const Header = (props) => {
   return (
     <nav>
-      <img src={Logo} />
-      <div>
+      <div class="logo">
+        <img src={Logo} />
+        <p>card-game</p>
+      </div>
+      <div class="score">
         <div>Score: {props.score}</div>
         <div>Hiscore: {props.hiscore}</div>
       </div>
