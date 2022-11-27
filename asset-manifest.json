@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7b91f10b.css",
+    "main.js": "/static/js/main.61a94dce.js",
+    "static/js/787.d6a8b40f.chunk.js": "/static/js/787.d6a8b40f.chunk.js",
+    "static/media/Grunbeld.jpg": "/static/media/Grunbeld.374543213522046cf6b6.jpg",
+    "static/media/Wyad.jpg": "/static/media/Wyad.bf0fe47a8d4391f2a2df.jpg",
+    "static/media/BishopMozgus.jpg": "/static/media/BishopMozgus.fb6e5b8eec17978c7bf2.jpg",
+    "static/media/Slan.jpg": "/static/media/Slan.7694e9eb75f96ae0ba14.jpg",
+    "static/media/Void.jpg": "/static/media/Void.21c99c6ce0d664933be6.jpg",
+    "static/media/Rosine.jpg": "/static/media/Rosine.e85f6f408d998fae88cc.jpg",
+    "static/media/Zodd.jpg": "/static/media/Zodd.1f03a8fe9d5d8080363c.jpg",
+    "static/media/Ubik.jpg": "/static/media/Ubik.aef1d9af7df2e2f9d071.jpg",
+    "static/media/Femto.jpg": "/static/media/Femto.ba43e89d82a6676d74f7.jpg",
+    "static/media/CountSlug.jpg": "/static/media/CountSlug.b252df964ae12f07e879.jpg",
+    "static/media/RapeHorse.jpg": "/static/media/RapeHorse.ccfb17653ad1442ba0cd.jpg",
+    "static/media/Conrad.jpg": "/static/media/Conrad.bd71ff3e09e1ccb175f1.jpg",
+    "static/media/background.jpg": "/static/media/background.23e5a2166fd8df451e5c.jpg",
+    "static/media/SpringRage.ttf": "/static/media/SpringRage.dd7362bb5cd5a050da9f.ttf",
+    "static/media/Logo.svg": "/static/media/Logo.890aaea9bef4395e2bc2482739f1945c.svg",
+    "static/media/Cut.webp": "/static/media/Cut.c6558099fd825f9fc776.webp",
+    "index.html": "/index.html",
+    "main.7b91f10b.css.map": "/static/css/main.7b91f10b.css.map",
+    "main.61a94dce.js.map": "/static/js/main.61a94dce.js.map",
+    "787.d6a8b40f.chunk.js.map": "/static/js/787.d6a8b40f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b91f10b.css",
+    "static/js/main.61a94dce.js"
+  ]
+}
