@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/memory-card/static/css/main.886e1214.css",
-    "main.js": "/memory-card/static/js/main.b40bd915.js",
+    "main.css": "/memory-card/static/css/main.53d63a48.css",
+    "main.js": "/memory-card/static/js/main.f01cad81.js",
     "static/js/787.7efd31bd.chunk.js": "/memory-card/static/js/787.7efd31bd.chunk.js",
     "static/media/Grunbeld.jpg": "/memory-card/static/media/Grunbeld.374543213522046cf6b6.jpg",
     "static/media/Wyad.jpg": "/memory-card/static/media/Wyad.bf0fe47a8d4391f2a2df.jpg",
@@ -17,15 +17,15 @@
     "static/media/Conrad.jpg": "/memory-card/static/media/Conrad.bd71ff3e09e1ccb175f1.jpg",
     "static/media/background.jpg": "/memory-card/static/media/background.23e5a2166fd8df451e5c.jpg",
     "static/media/SpringRage.ttf": "/memory-card/static/media/SpringRage.dd7362bb5cd5a050da9f.ttf",
+    "static/media/Cut.svg": "/memory-card/static/media/Cut.911fc7e82c2765c93865.svg",
     "static/media/Logo.svg": "/memory-card/static/media/Logo.890aaea9bef4395e2bc2482739f1945c.svg",
-    "static/media/Cut.webp": "/memory-card/static/media/Cut.c6558099fd825f9fc776.webp",
     "index.html": "/memory-card/index.html",
-    "main.886e1214.css.map": "/memory-card/static/css/main.886e1214.css.map",
-    "main.b40bd915.js.map": "/memory-card/static/js/main.b40bd915.js.map",
+    "main.53d63a48.css.map": "/memory-card/static/css/main.53d63a48.css.map",
+    "main.f01cad81.js.map": "/memory-card/static/js/main.f01cad81.js.map",
     "787.7efd31bd.chunk.js.map": "/memory-card/static/js/787.7efd31bd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.886e1214.css",
-    "static/js/main.b40bd915.js"
+    "static/css/main.53d63a48.css",
+    "static/js/main.f01cad81.js"
   ]
 }
