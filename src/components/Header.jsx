@@ -14,7 +14,7 @@ const Header = (props) => {
           props.toggleSlained(event);
         }}
       >
-        SLAIN CHECKLIST
+        SLAIN LIST
       </button>
       <div className="score">
         <div>Score: {props.score}</div>

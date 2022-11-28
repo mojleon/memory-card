@@ -18,6 +18,7 @@ import "./App.scss";
 
 import Card from "./components/Card.jsx";
 import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
 
 class App extends React.Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class App extends React.Component {
       score: 0,
       hiscore: 0,
 
-      slainChecklist: false,
+      slainList: false,
     };
 
     this.clickCard = this.clickCard.bind(this);
@@ -38,7 +39,7 @@ class App extends React.Component {
 
   toggleSlained(event) {
     event.target.classList.toggle("active");
-    this.setState({ slainChecklist: !this.state.slainChecklist });
+    this.setState({ slainList: !this.state.slainList });
   }
 
   componentDidMount() {
@@ -57,14 +58,15 @@ class App extends React.Component {
   }
 
   youWon() {
-    alert("GUTS KILLED ALL THE APOSTLES!");
+    if(!this.state.slainList) alert("GUTS WITH HIS BERSERKER RAGE WAS SUCCESSFUL IN KILLING ALL THE APOSTLES AND SO CALLED ANGELS!");
+    else alert("GUTS WAS SUCCESSFUL BUT HE CHEATED BY KEEPING A LIST ON WHICH APOSTLES HE HAD KILLED... WHAT A LOSER...");
     this.incrementScore();
     this.reset();
   }
 
   gameOver() {
     alert(
-      "GUTS WENT LOOKING FOR THE APOSTLE, BUT COULDN'T FIND IT FOR IT WAS DEAD!"
+      "GUTS IN HIS BERSERKER RAGE ATTACKED AN ENEMY THAT WAS ALREADY DEAD AND THIS LITTLE MISTAKE COST HIM HIS LIFE!"
     );
     this.reset();
   }
@@ -98,42 +100,42 @@ class App extends React.Component {
             name="Bishop Mozgus"
             image={BishopMozgus}
             clickCard={this.clickCard}
-            slain={this.state.slainChecklist && this.state.picked.includes("1")}
+            slain={this.state.slainList && this.state.picked.includes("1")}
           />
           <Card
             number="2"
             name="Conrad"
             image={Conrad}
             clickCard={this.clickCard}
-            slain={this.state.slainChecklist && this.state.picked.includes("2")}
+            slain={this.state.slainList && this.state.picked.includes("2")}
           />
           <Card
             number="3"
             name="Count slug"
             image={CountSlug}
             clickCard={this.clickCard}
-            slain={this.state.slainChecklist && this.state.picked.includes("3")}
+            slain={this.state.slainList && this.state.picked.includes("3")}
           />
           <Card
             number="4"
             name="Femto"
             image={Femto}
             clickCard={this.clickCard}
-            slain={this.state.slainChecklist && this.state.picked.includes("4")}
+            slain={this.state.slainList && this.state.picked.includes("4")}
           />
           <Card
             number="5"
             name="Grunbeld"
             image={Grunbeld}
             clickCard={this.clickCard}
-            slain={this.state.slainChecklist && this.state.picked.includes("5")}
+            slain={this.state.slainList && this.state.picked.includes("5")}
           />
           <Card
             number="6"
             name="Rape horse"
             image={RapeHorse}
             clickCard={this.clickCard}
-            slain={this.state.slainChecklist && this.state.picked.includes("6")}
+            slain={this.state.slainList && this.state.picked.includes("6")}
           />
 
           <Card
@@ -141,21 +143,21 @@ class App extends React.Component {
             name="Rosine"
             image={Rosine}
             clickCard={this.clickCard}
-            slain={this.state.slainChecklist && this.state.picked.includes("7")}
+            slain={this.state.slainList && this.state.picked.includes("7")}
           />
           <Card
             number="8"
             name="Slan"
             image={Slan}
             clickCard={this.clickCard}
-            slain={this.state.slainChecklist && this.state.picked.includes("8")}
+            slain={this.state.slainList && this.state.picked.includes("8")}
           />
           <Card
             number="9"
             name="Ubik"
             image={Ubik}
             clickCard={this.clickCard}
-            slain={this.state.slainChecklist && this.state.picked.includes("9")}
+            slain={this.state.slainList && this.state.picked.includes("9")}
           />
           <Card
             number="10"
@@ -163,7 +165,7 @@ class App extends React.Component {
             image={Void}
             clickCard={this.clickCard}
             slain={
-              this.state.slainChecklist && this.state.picked.includes("10")
+              this.state.slainList && this.state.picked.includes("10")
             }
           />
           <Card
@@ -172,7 +174,7 @@ class App extends React.Component {
             image={Wyad}
             clickCard={this.clickCard}
             slain={
-              this.state.slainChecklist && this.state.picked.includes("11")
+              this.state.slainList && this.state.picked.includes("11")
             }
           />
           <Card
@@ -181,10 +183,11 @@ class App extends React.Component {
             image={Zodd}
             clickCard={this.clickCard}
             slain={
-              this.state.slainChecklist && this.state.picked.includes("12")
+              this.state.slainList && this.state.picked.includes("12")
             }
           />
         </main>
+        <Footer />
       </div>
     );
   }
