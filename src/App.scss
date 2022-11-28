@@ -10,6 +10,7 @@ body {
   background-repeat: no-repeat;
   color: white;
   font-family: "SpringRage";
+  background-color: black;
 }
 
 .App {
@@ -88,6 +89,7 @@ nav {
     font-size: 24pt;
     color: white;
     background-color: red;
+    border: none;
 
     &.active {
       color: red;
